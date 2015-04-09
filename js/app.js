@@ -71,3 +71,5 @@ var friendView = {
 		this.friendImageElem.src = currentFriend.imgSrc;
 	}
 };
+
+octopus.init();
