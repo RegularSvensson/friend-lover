@@ -2,7 +2,7 @@
 
 var model = {
 	currentFriend: null,
-	friend: [
+	friends: [
 		{
 			clickCount: 0,
 			name: 'Meron',
