@@ -46,6 +46,12 @@ var octopus = {
 	incrementCounter: function() {
 		model.currentFriend.clickCount++;
 		friendView.render();
+	},
+	setCurrentFriend: function(friend) {
+		model.currentFriend = friend;
+	},
+	getFriends: function() {
+		return model.friends;
 	}
 };
 
