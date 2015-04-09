@@ -31,3 +31,19 @@ var model = {
 	]
 };
 
+/* ======= Octopus ======= */
+
+var octopus = {
+	init: function() {
+		model.currentFriend = model.friends[0];
+
+		friendView.init();
+	},
+	getCurrentFriend: function() {
+		return model.currentFriend;
+	},
+	incrementCounter: function() {
+		model.currentFriend.clickCount++;
+		friendView.render();
+	}
+};
