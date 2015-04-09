@@ -47,3 +47,27 @@ var octopus = {
 		friendView.render();
 	}
 };
+
+/* ======= View ======= */
+
+var friendView = {
+	init: function() {
+		this.friendElem = document.getElementById('friend');
+		this.friendNameElem = document.getElementById('friend-name');
+		this.friendImageElem = document.getElementById('friend-img');
+		this.countElem = document.getElementById('friend-count');
+
+		this.friendImageElem.addEventListener('click', function() {
+			octopus.incrementCounter();
+		});
+
+		this.render();
+	},
+
+	render: function() {
+		var currentFriend = octopus.getCurrentFriend();
+		this.countElem.textContent = currentFriend.clickCount;
+		this.friendNameElem.textContent = currentFriend.name;
+		this.friendImageElem.src = currentFriend.imgSrc;
+	}
+};
