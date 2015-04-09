@@ -95,7 +95,7 @@ var friendListView = {
 		for (i = 0; i < friends.length; i++) {
 			friend = friends[i];
 
-			elem = document.createElement('li');
+			elem = document.createElement('button');
 			elem.textContent = friend.name;
 
 			elem.addEventListener('click', (function(friendCopy) {
