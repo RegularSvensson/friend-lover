@@ -38,6 +38,7 @@ var octopus = {
 		model.currentFriend = model.friends[0];
 
 		friendView.init();
+		friendListView.init();
 	},
 	getCurrentFriend: function() {
 		return model.currentFriend;
