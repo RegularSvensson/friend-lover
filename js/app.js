@@ -73,7 +73,7 @@ var friendView = {
 
 	render: function() {
 		var currentFriend = octopus.getCurrentFriend();
-		this.countElem.textContent = currentFriend.clickCount;
+		this.countElem.textContent = currentFriend.clickCount + " <3";
 		this.friendNameElem.textContent = currentFriend.name;
 		this.friendImageElem.src = currentFriend.imgSrc;
 	}
