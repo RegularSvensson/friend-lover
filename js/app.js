@@ -79,4 +79,36 @@ var friendView = {
 	}
 };
 
+var friendListView = {
+	init: function() {
+		this.friendListElem = document.getElementById('friend-list');
+
+		this.render();
+	},
+	render: function() {
+		var friend, elem, i;
+
+		var friends = octopus.getFriends();
+
+		this.friendListElem.innerHTML = '';
+
+		for (i = 0; i < friends.length; i++) {
+			friend = friends[i];
+
+			elem = document.createElement('li');
+			elem.textContent = friend.name;
+
+			elem.addEventListener('click', (function(friendCopy) {
+				return function() {
+					octopus.setCurrentFriend(friendCopy);
+					friendView.render();
+				};
+			})(friend));
+
+			this.friendListElem.appendChild(elem);
+		}
+	}
+};
+
+
 octopus.init();
